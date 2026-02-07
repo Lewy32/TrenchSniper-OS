@@ -15,6 +15,14 @@
       "import": "./dist/wallet/index.js",
       "types": "./dist/wallet/index.d.ts"
     },
+    "./snipe": {
+      "import": "./dist/snipe/index.js",
+      "types": "./dist/snipe/index.d.ts"
+    },
+    "./trading": {
+      "import": "./dist/trading/index.js",
+      "types": "./dist/trading/index.d.ts"
+    },
     "./connection": {
       "import": "./dist/connection/index.js",
       "types": "./dist/connection/index.d.ts"
