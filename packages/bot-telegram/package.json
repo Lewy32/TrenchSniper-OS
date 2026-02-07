@@ -1,0 +1,54 @@
+{
+  "name": "@trenchsniper/bot-telegram",
+  "version": "0.1.0",
+  "description": "Telegram Bot for TrenchSniper OS - Real-time snipe alerts and wallet notifications",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./bot": {
+      "import": "./dist/bot/index.js",
+      "types": "./dist/bot/index.d.ts"
+    },
+    "./alerts": {
+      "import": "./dist/alerts/index.js",
+      "types": "./dist/alerts/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@trenchsniper/core": "workspace:*",
+    "@trenchsniper/snipe": "workspace:*",
+    "telegraf": "^4.16.3",
+    "dotenv": "^16.4.5",
+    "ky": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "solana",
+    "snipe",
+    "alerts",
+    "notifications"
+  ],
+  "license": "MIT"
+}
